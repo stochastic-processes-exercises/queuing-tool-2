@@ -24,7 +24,7 @@ q_args = {
 }
 ```
 
-You will need to  copy this code into `main.py` in order to get back to being able to simulate the M/M/1 queue.  Once you have added these commands you can then use the `qt.QueueNetwork`, `qt.initialize`, `qt.start_collecting_data`, `qt.simulate` and `qt.get_agent_data` commands that you learned about in the previous exercise to run simulations of the M/M/1 queue and to collect data on the agents who pass through the queue.  _Try to see if you can reproduce what you did in the previous exercise by copying and pasting the code above and the code that you used to complete the last exercise now_.
+You will need to  copy this code into `main.py` in order to get back to being able to simulate the M/M/1 queue.  Once you have added these commands you can then use the `qt.QueueNetwork`, `qt.initialize`, `qt.start_collecting_data`, `qt.simulate` and `qt.get_agent_data` commands that you learned about in the previous exercise to run simulations of the M/M/1 queue and to collect data on the agents who pass through the queue.  __Try to see if you can reproduce what you did in the previous exercise by copying and pasting the code above and the code that you used to complete the last exercise now__.
 
 Now that you have got the code working again lets consider what the code in the above snippet does.  Hopefully you recognise that there are three function definitions at the start of this block of code.  The first of these functions, `rate`, just returns a number.  The second function - `arr_f`, meanwhile, takes the arrival time of the nth agent and input and returns the arrival time for the (n+1)th agent.  We are using the `qt.poisson_random_measure` function here, which is part of queuing tool, to simulate a poisson process. However, we could also write that function as:
 
@@ -64,4 +64,4 @@ In queuing tool objects called `QueueServers` manage queues. When you use the co
 
 To pass this information to the `QueueServer` object we pass the functions called `arr_f` and `ser_f` that we defined earlier by setting the appropriate  values of the appropriate key:value pairs in the `q_args` dictionary.
 
-_Given what you have learend about queuing tool can you write modify the code I have given you for simulating the M/M/1 queue so that it simulates an M/M/3 queue instead._  In other words, can you increase the number of servers in the queue from one to three. 
+__Given what you have learend about queuing tool can you write modify the code I have given you for simulating the M/M/1 queue so that it simulates an M/M/3 queue instead.__  In other words, can you increase the number of servers in the queue from one to three. 
