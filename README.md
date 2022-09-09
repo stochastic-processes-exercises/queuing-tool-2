@@ -25,6 +25,7 @@ q_args = {
 ```
 
 You will need to  copy this code into `main.py` in order to get back to being able to simulate the M/M/1 queue.  Once you have added these commands you can then use the `qt.QueueNetwork`, `qt.initialize`, `qt.start_collecting_data`, `qt.simulate` and `qt.get_agent_data` commands that you learned about in the previous exercise to run simulations of the M/M/1 queue and to collect data on the agents who pass through the queue.  __Try to see if you can reproduce what you did in the previous exercise by copying and pasting the code above and the code that you used to complete the last exercise now__.
+You don't need to make the graph you made at the end of that exercise but you do need to at least call `qt.QueueNetwork` to pass the test.
 
 Now that you have got the code working again lets consider what the code in the above snippet does.  Hopefully you recognise that there are three function definitions at the start of this block of code.  The first of these functions, `rate`, just returns a number.  The second function - `arr_f`, meanwhile, takes the arrival time of the nth agent and input and returns the arrival time for the (n+1)th agent.  We are using the `qt.poisson_random_measure` function here, which is part of queuing tool, to simulate a poisson process. However, we could also write that function as:
 
