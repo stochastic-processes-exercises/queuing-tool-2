@@ -57,6 +57,8 @@ Notice how the `q_args` variable is used in the command that sets up the queue:
 qn = qt.QueueNetwork( g=g, q_classes=q_classes, q_args=q_args )
 ```
 
+Notice, furthrmore, that to pass this exercise the queue network object that is created by the `qt.QueueNetwork` command must be called `qn` as this object is used within the tests.
+
 In queuing tool objects called `QueueServers` manage queues. When you use the command above you are thus setting up one `QueueServer` to manage the M/M/1 queue.  The `q_args` variable that you set up above tells queuing tool how this `QueueServer` object should be set up.  What queuing tool needs to know about each `QueueServer` is what you would expect; namely:
 
 1. What governs the times that agents arrive at the queue -- For an M/M/1 queue this is a Poisson process.
@@ -64,4 +66,4 @@ In queuing tool objects called `QueueServers` manage queues. When you use the co
 
 To pass this information to the `QueueServer` object we pass the functions called `arr_f` and `ser_f` that we defined earlier by setting the appropriate  values of the appropriate key:value pairs in the `q_args` dictionary.
 
-__Given what you have learend about queuing tool can you write modify the code I have given you for simulating the M/M/1 queue so that it simulates an M/M/3 queue instead.__  In other words, can you increase the number of servers in the queue from one to three. 
+__Given what you have learend about queuing tool can you write modify the code I have given you for simulating the M/M/1 queue so that it simulates an M/M/3 queue instead.__  In other words, can you increase the number of servers in the queue from one to three.   
